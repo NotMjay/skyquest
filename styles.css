@@ -130,7 +130,7 @@ nav a {
 }
 
 .destinations h1 {
-  font-size: var(--font-size-large);
+  font-size: 2rem;
   margin-bottom: var(--spacing-lg);
   color: #023e8a;
 }
@@ -208,7 +208,7 @@ nav a {
 }
 
 .hotels h1 {
-  font-size: var(--font-size-large);
+  font-size: 2rem;
   margin-bottom: var(--spacing-lg);
   color: #023e8a;
 }
@@ -347,6 +347,137 @@ nav a {
 
   .card-small {
     height: 300px;
+  }
+}
+.services{
+  padding: var(--spacing-xl);
+  background-color: var(--background-white);
+  text-align: center;
+}
+
+.services h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  color: #023e8a;
+}
+
+.services.box{
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+}
+
+.service-card {
+  flex-shrink: 0;
+  width: 350px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  background-color: var(--background-light);
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.service-info {
+  padding: var(--spacing-sm);
+  text-align: left;
+  opacity: 70%;
+}
+
+.service-info h2 {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-xs);
+}
+
+.service-info p {
+  font-size: var(--font-size-small);
+  color: #555;
+}
+
+.testimonial-section {
+  display: flex;
+  gap: 20px;
+  padding: 20px 20px;
+  background-color: #f9f9f9;
+}
+.testimonials-section h2{
+  font-size: 2rem;
+  color: #023e8a;
+  text-align: center;
+  margin-top: 20px;
+}
+.testimonial {
+  width: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.author{
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #023e8a;
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.rating span {
+  color: #ffd700;
+  font-size: 1.2em;
+}
+
+.testimonial h4 {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #333333;
+}
+
+.testimonial p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 20px;
+  }
+
+  .testimonial {
+    padding: 15px;
+  }
+
+  .testimonial-header img {
+    width: 40px;
+    height: 40px;
   }
 }
 footer {
