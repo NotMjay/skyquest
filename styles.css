@@ -142,7 +142,7 @@ nav a {
 .scroll-track {
   display: flex;
   gap: var(--spacing-lg);
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 40s linear infinite;
 }
 
 /* Pause animation when hovering over container */
@@ -349,56 +349,65 @@ nav a {
     height: 300px;
   }
 }
-.services{
+.services {
   padding: var(--spacing-xl);
   background-color: var(--background-white);
   text-align: center;
 }
 
 .services h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: var(--spacing-lg);
   color: #023e8a;
+  font-weight: 700;
 }
 
-.services.box{
+.services-box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: var(--spacing-lg);
   padding-bottom: var(--spacing-md);
 }
 
 .service-card {
-  flex-shrink: 0;
-  width: 350px;
+  flex: 1 1 300px;
+  max-width: 350px;
   border-radius: var(--border-radius-md);
   overflow: hidden;
-  box-shadow: 0 4px 8px var(--shadow-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: var(--background-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .service-card img {
   width: 100%;
-  height: 160px;
+  height: 180px;
   object-fit: cover;
 }
 
 .service-info {
-  padding: var(--spacing-sm);
+  padding: var(--spacing-md);
   text-align: left;
-  opacity: 70%;
+  opacity: 0.9;
 }
 
 .service-info h2 {
-  font-size: var(--font-size-large);
+  font-size: 1.25rem;
   margin-bottom: var(--spacing-xs);
+  color: #0077b6;
 }
 
 .service-info p {
-  font-size: var(--font-size-small);
+  font-size: 0.95rem;
   color: #555;
+  line-height: 1.6;
 }
-
 .testimonial-section {
   display: flex;
   gap: 20px;
@@ -480,10 +489,164 @@ nav a {
     height: 40px;
   }
 }
-footer {
+.site-footer {
   background-color: var(--primary-color);
   color: var(--text-light);
+  padding: var(--spacing-xl);
   text-align: center;
-  padding: var(--spacing-md);
-  margin-top: var(--spacing-xl);
+}
+
+.footer-content h3 {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-content p {
+  font-size: var(--font-size-small);
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: var(--spacing-md);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+/* 📱 Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-md);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-large);
+  }
+
+  .hero p {
+    font-size: var(--font-size-base);
+  }
+
+  /* Features Section */
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Destinations & Hotels */
+  /* Destinations Scroll Fix */
+.scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.scroll-track {
+  display: flex;
+  gap: var(--spacing-lg);
+  width: max-content;
+}
+
+/* Hotels Scroll Fix */
+.hotel-scroll {
+  display: flex;
+  gap: var(--spacing-lg);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding-bottom: var(--spacing-md);
+}
+
+.hotel-card {
+  flex-shrink: 0;
+  width: 280px;
+}
+
+
+  /* Travel Highlights */
+  .highlight-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    height: auto;
+  }
+
+  .card-small,
+  .card-large {
+    height: 300px;
+    width: 100%;
+  }
+
+  /* Services Section */
+  .services.box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Testimonials Section */
+  .testimonial-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    width: 90%;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .testimonial-header img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: var(--font-size-small);
+    padding: var(--spacing-sm);
+  }
 }
