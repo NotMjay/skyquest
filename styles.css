@@ -29,7 +29,7 @@
   --border-radius-md: 10px;
 
   /* 🖋️ Fonts */
-  --font-family: 'Segoe UI', sans-serif;
+  --font-family: "Segoe UI", sans-serif;
 }
 
 * {
@@ -70,7 +70,7 @@ nav a {
 }
 
 .hero {
-  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
   background-size: cover;
   background-position: center;
   padding: var(--spacing-xxxl) var(--spacing-xl);
@@ -96,9 +96,9 @@ nav a {
   border-radius: var(--border-radius-sm);
   font-weight: bold;
 }
-.divider{
+.divider {
   width: 100%;
-  padding:var(--spacing-sm);
+  padding: var(--spacing-sm);
   text-align: center;
   color: var(--text-light);
   background-color: var(--primary-color);
@@ -118,7 +118,7 @@ nav a {
   text-align: center;
   box-shadow: 0 0 10px var(--shadow-color);
 }
-.feature-card:hover{
+.feature-card:hover {
   box-shadow: 0 0px 10px var(--primary-color);
 }
 .destinations {
@@ -126,7 +126,6 @@ nav a {
   background-color: var(--background-light);
   text-align: center;
   overflow: hidden; /* Prevent overflow from animation */
-
 }
 
 .destinations h1 {
@@ -266,7 +265,7 @@ nav a {
   font-size: 2rem;
   color: #023e8a;
   margin-bottom: 2rem;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .highlight-grid {
@@ -292,7 +291,7 @@ nav a {
   background-position: center;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -307,7 +306,7 @@ nav a {
   color: #ffffff;
   padding: 1rem;
   text-align: left;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .highlight-overlay h3 {
@@ -319,18 +318,18 @@ nav a {
   font-size: 0.95rem;
   line-height: 1.4;
 }
-.highlight-card:nth-of-type(1){
-  background-image: url('./images/family.jpg');
+.highlight-card:nth-of-type(1) {
+  background-image: url("./images/family.jpg");
   object-fit: cover;
 }
-.highlight-card:nth-of-type(3){
-  background-image: url('./images/desert.jpg')
+.highlight-card:nth-of-type(3) {
+  background-image: url("./images/desert.jpg");
 }
-.highlight-card:nth-of-type(2){
-  background-image: url('./images/rock.jpg')
+.highlight-card:nth-of-type(2) {
+  background-image: url("./images/rock.jpg");
 }
-.highlight-card:nth-of-type(4){
-  background-image: url('./images/cabin.jpg')
+.highlight-card:nth-of-type(4) {
+  background-image: url("./images/cabin.jpg");
 }
 /* Responsive */
 @media (max-width: 900px) {
@@ -414,7 +413,7 @@ nav a {
   padding: 20px 20px;
   background-color: #f9f9f9;
 }
-.testimonials-section h2{
+.testimonials-section h2 {
   font-size: 2rem;
   color: #023e8a;
   text-align: center;
@@ -433,7 +432,7 @@ nav a {
   align-items: center;
   gap: 10px;
 }
-.author{
+.author {
   display: flex;
   flex-direction: column;
 }
@@ -492,18 +491,25 @@ nav a {
 .site-footer {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-xxl) var(--spacing-xl);
   text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .footer-content h3 {
   font-size: var(--font-size-large);
   margin-bottom: var(--spacing-sm);
+  font-weight: 600;
 }
 
 .footer-content p {
   font-size: var(--font-size-small);
   margin-bottom: var(--spacing-md);
+  line-height: 1.6;
 }
 
 .cta-button {
@@ -515,13 +521,18 @@ nav a {
   font-weight: bold;
   display: inline-block;
   margin-bottom: var(--spacing-md);
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff4b4b;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
   gap: var(--spacing-md);
-  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
 }
 
 .social-icons a img {
@@ -531,7 +542,18 @@ nav a {
 }
 
 .social-icons a:hover img {
-  transform: scale(1.1);
+  transform: scale(1.2);
+}
+
+.footer-contact p {
+  font-size: var(--font-size-small);
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-contact a {
+  color: var(--text-light);
+  text-decoration: underline;
+  font-weight: 500;
 }
 /* 📱 Mobile Responsive Styles */
 @media (max-width: 768px) {
@@ -575,33 +597,32 @@ nav a {
 
   /* Destinations & Hotels */
   /* Destinations Scroll Fix */
-.scroll-container {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-}
+  .scroll-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
 
-.scroll-track {
-  display: flex;
-  gap: var(--spacing-lg);
-  width: max-content;
-}
+  .scroll-track {
+    display: flex;
+    gap: var(--spacing-lg);
+    width: max-content;
+  }
 
-/* Hotels Scroll Fix */
-.hotel-scroll {
-  display: flex;
-  gap: var(--spacing-lg);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  padding-bottom: var(--spacing-md);
-}
+  /* Hotels Scroll Fix */
+  .hotel-scroll {
+    display: flex;
+    gap: var(--spacing-lg);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: var(--spacing-md);
+  }
 
-.hotel-card {
-  flex-shrink: 0;
-  width: 280px;
-}
-
+  .hotel-card {
+    flex-shrink: 0;
+    width: 280px;
+  }
 
   /* Travel Highlights */
   .highlight-grid {
@@ -643,7 +664,34 @@ nav a {
     width: 40px;
     height: 40px;
   }
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    touch-action: manipulation;
+  }
 
+  .social-icons a:active img {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  .cta-button {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    touch-action: manipulation;
+  }
+
+  .cta-button:active {
+    transform: scale(0.98);
+    background-color: #ff4b4b;
+  }
   /* Footer */
   footer {
     font-size: var(--font-size-small);
